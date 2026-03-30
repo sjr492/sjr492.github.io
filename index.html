@@ -1273,7 +1273,12 @@
                 footerYear.textContent = String(new Date().getFullYear());
             }
 
+            let pageLoadedApplied = false;
             const setPageLoaded = () => {
+                if (pageLoadedApplied) {
+                    return;
+                }
+                pageLoadedApplied = true;
                 document.body.classList.add('page-loaded');
             };
 
