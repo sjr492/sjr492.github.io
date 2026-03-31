@@ -751,6 +751,26 @@
             font-style: italic;
         }
 
+        .involvement-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 10px;
+            padding: 5px 10px;
+            border-radius: 999px;
+            background: var(--accent);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 0.74rem;
+            font-weight: 500;
+            line-height: 1;
+            transition: background 0.3s var(--ease);
+        }
+
+        .involvement-link:hover {
+            background: var(--accent-light);
+        }
+
         #contact {
             padding-bottom: 120px;
         }
@@ -1192,10 +1212,12 @@
                     <div class="involvement-item">
                         <h3>Kappa Theta Pi</h3>
                         <p>Professional Tech Fraternity</p>
+                        <a class="involvement-link" href="https://www.ktpmiami.com/" target="_blank" rel="noopener noreferrer">Visit ↗</a>
                     </div>
                     <div class="involvement-item">
                         <h3>ColorStack</h3>
                         <p>Nonprofit Tech Community</p>
+                        <a class="involvement-link" href="https://www.colorstack.org/" target="_blank" rel="noopener noreferrer">Visit ↗</a>
                     </div>
                     <div class="involvement-item">
                         <h3>Association of Commuters</h3>
