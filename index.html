@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastian Rivas</title>
-    <meta name="description" content="Sebastian Rivas — Computer Science student at the University of Miami. Aspiring data engineer with a foundation in Python, Java, and SQL.">
+    <title>Sebastian Rivas | Computer Science Student</title>
+    <meta name="description" content="Computer Science student at the University of Miami interested in software engineering, backend systems, and data workflows.">
+    <meta name="author" content="Sebastian Rivas">
+    <link rel="canonical" href="https://sebastianjrivas.page/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sebastianjrivas.page/">
+    <meta property="og:title" content="Sebastian Rivas | Computer Science Student">
+    <meta property="og:description" content="Python and Java projects, professional experience, and education at the University of Miami.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sebastian Rivas | Computer Science Student">
+    <meta name="twitter:description" content="Python and Java projects, professional experience, and education at the University of Miami.">
     <meta name="theme-color" content="#F6F5F0">
     <link rel="icon" type="image/x-icon" href="SR.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,15 +28,15 @@
             --surface: #FFFFFF;
             --text: #111110;
             --text-secondary: #4A4A45;
-            --text-muted: #8A8A82;
+            --text-muted: #6B6B65;
             --accent: #1B4332;
             --accent-light: #2D6A4F;
-            --accent-glow: rgba(27, 67, 50, 0.12);
+
             --border: #DDDDD5;
             --border-light: #EEEEEA;
             --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
             --card-shadow-hover: 0 4px 16px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.04);
-            --radius: 12px;
+
             --font-display: 'Instrument Serif', Georgia, serif;
             --font-body: 'Outfit', system-ui, sans-serif;
             --font-mono: 'Space Mono', 'Courier New', monospace;
@@ -64,35 +73,11 @@
             outline-offset: 2px;
         }
 
-        .bg-glow {
-            position: fixed;
-            top: -20%;
-            right: -15%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(27, 67, 50, 0.02) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: -1;
-            animation: glowDrift 25s var(--ease) infinite;
-        }
 
-        .bg-glow-2 {
-            position: fixed;
-            bottom: -10%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(45, 106, 79, 0.02) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: -1;
-            animation: glowDrift 30s var(--ease) infinite reverse;
-        }
 
-        @keyframes glowDrift {
-            0%, 100% { transform: translate(0, 0); }
-            33% { transform: translate(30px, -20px); }
-            66% { transform: translate(-20px, 30px); }
-        }
+
+
+
 
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
@@ -109,10 +94,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes pulseDot {
-            0%, 100% { opacity: 0.35; }
-            50% { opacity: 1; }
-        }
+
 
         .container {
             width: 100%;
@@ -236,7 +218,7 @@
             display: none;
             position: fixed;
             inset: 0;
-            z-index: 99;
+            z-index: 101;
             background: var(--bg);
             flex-direction: column;
             align-items: flex-start;
@@ -273,7 +255,8 @@
         }
 
         .hero {
-            min-height: 100vh;
+            min-height: min(100svh, 760px);
+            padding-bottom: 0;
             display: flex;
             align-items: center;
             padding-top: 64px;
@@ -281,7 +264,7 @@
         }
 
         .hero-inner {
-            padding: 120px 0 80px;
+            padding: 64px 0;
             display: grid;
             grid-template-columns: 1fr 300px;
             gap: 64px;
@@ -298,10 +281,7 @@
             margin-bottom: 28px;
         }
 
-        .hero-text h1 em {
-            font-style: italic;
-            color: var(--accent);
-        }
+
 
         .hero-word {
             display: inline-block;
@@ -373,32 +353,10 @@
             border-bottom-color: var(--accent);
         }
 
-        .hero-currently {
-            margin-top: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            border-radius: 100px;
-            padding: 6px 14px;
-            background: rgba(27, 67, 50, 0.08);
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            color: var(--accent);
-            opacity: 0;
-            transform: translateY(20px);
-        }
 
-        .page-loaded .hero-currently {
-            animation: fadeInUp 0.6s var(--ease) 1100ms both;
-        }
 
-        .pulse-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--accent-light);
-            animation: pulseDot 1.5s var(--ease) infinite;
-        }
+
+
 
         .hero-buttons,
         .contact-buttons {
@@ -431,7 +389,7 @@
             transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
             cursor: pointer;
             text-decoration: none;
-            will-change: transform;
+
         }
 
         .social-btn:hover {
@@ -452,7 +410,7 @@
             opacity: 0;
             transform: translateY(20px) scale(0.98);
             transition: transform 0.3s var(--ease);
-            will-change: transform;
+
         }
 
         .page-loaded .hero-photo-wrap {
@@ -525,7 +483,8 @@
             color: var(--text-secondary);
         }
 
-        .about-aside-item strong {
+        .about-aside-item h3 {
+            font-size: inherit;
             display: block;
             font-weight: 600;
             color: var(--text);
@@ -547,7 +506,7 @@
             font-family: var(--font-mono);
             font-size: 0.8rem;
             transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
-            will-change: transform;
+
         }
 
         .skill-chip:hover {
@@ -651,8 +610,8 @@
             border-radius: 12px;
             padding: 28px;
             box-shadow: var(--card-shadow);
-            transition: all 0.3s var(--ease);
-            will-change: transform;
+            transition: box-shadow 0.3s var(--ease), border-color 0.3s var(--ease), transform 0.3s var(--ease);
+
         }
 
         .project-card:hover {
@@ -661,12 +620,7 @@
             transform: translateY(-2px);
         }
 
-        .project-icon {
-            width: 24px;
-            height: 24px;
-            margin-bottom: 12px;
-            color: var(--accent);
-        }
+
 
         .project-header {
             display: flex;
@@ -803,7 +757,7 @@
             padding: 14px 32px;
             border-radius: 8px;
             transition: background 0.3s var(--ease);
-            will-change: transform;
+
         }
 
         .cta-btn:hover {
@@ -1025,56 +979,85 @@
                 width: 100%;
             }
         }
+
+        section { scroll-margin-top: 80px; }
+        .nav, .hero-word, .hero-bio, .hero-meta-item, .hero-buttons, .hero-photo-wrap, .reveal { opacity: 1; transform: none; }
+        .hero-word { animation: none; }
+        .page-loaded .hero-word { animation: wordReveal 0.5s var(--ease) backwards; animation-delay: var(--word-delay); }
+        .project-card { display: flex; flex-direction: column; }
+        .project-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: auto; padding-top: 8px; }
+        .project-kind, .source-note { font-size: 0.8rem; color: var(--text-muted); }
+        .exp-bullets { padding-left: 1.2rem; color: var(--text-secondary); }
+        .exp-bullets li + li { margin-top: 10px; }
+        .secondary-btn { background: var(--accent); }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+        .skip-link { position: fixed; top: 8px; left: 8px; z-index: 102; padding: 10px 16px; background: var(--accent); color: white; transform: translateY(-160%); }
+        .skip-link:focus { transform: none; }
+        .nav-mobile-btn, .email-copy { display: none; }
+        .interactive .email-copy { display: inline-flex; }
+        @media (max-width: 767px) {
+            .interactive .nav-mobile-btn { display: block; }
+            body:not(.interactive) .nav { height: auto; min-height: 64px; flex-wrap: wrap; gap: 8px; }
+            body:not(.interactive) .nav-links { display: flex; flex-wrap: wrap; gap: 12px; }
+            .mobile-menu { overflow-y: auto; gap: 16px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            .nav, .hero-word, .hero-bio, .hero-meta-item, .hero-buttons, .hero-photo-wrap, .reveal { opacity: 1; transform: none; }
+        }
     </style>
 </head>
 <body>
-    <div class="bg-glow" aria-hidden="true"></div>
-    <div class="bg-glow-2" aria-hidden="true"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <nav class="nav" id="nav">
-        <a href="#" class="nav-name">SR</a>
+        <a href="#home" class="nav-name" aria-label="Home">SR</a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#academics">Education</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="nav-mobile-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">Menu</button>
     </nav>
 
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation" aria-hidden="true">
         <button class="mobile-menu-close" id="menuClose" type="button" aria-label="Close menu">Close</button>
         <a href="#about" class="mobile-link">About</a>
         <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#academics" class="mobile-link">Education</a>
         <a href="#projects" class="mobile-link">Projects</a>
         <a href="#contact" class="mobile-link">Contact</a>
     </div>
 
-    <main>
-        <section class="hero" id="home">
+    <main id="main-content" tabindex="-1">
+        <section class="hero" id="home" aria-labelledby="home-heading">
             <div class="container">
                 <div class="hero-inner">
                     <div class="hero-text">
-                        <h1>
+                        <h1 id="home-heading">
                             <span class="hero-word" style="--word-delay: 200ms;">Sebastian</span>
                             <span class="hero-word" style="--word-delay: 250ms;">Rivas</span>
                         </h1>
-                        <p class="hero-bio">Computer Science student at the University of Miami, graduating in May 2029 with minors in Mathematics and Quantitative Economics. I'm focused on data engineering: organizing data, building reliable pipelines, and making information useful.</p>
+                        <p class="hero-bio">Computer Science student at the University of Miami with minors in Mathematics and Quantitative Economics. I build small software projects with Python and Java and am developing my SQL skills. I’m seeking internships in software engineering, backend systems, or data.</p>
                         <div class="hero-meta">
                             <div class="hero-meta-item">
                                 <span class="hero-meta-label">Currently</span>
-                                <span class="hero-meta-value">CS @ University of Miami '29</span>
+                                <span class="hero-meta-value">B.S. Computer Science · May 2029</span>
                             </div>
                             <div class="hero-meta-item">
                                 <span class="hero-meta-label">Focus</span>
-                                <span class="hero-meta-value">Data Engineering</span>
+                                <span class="hero-meta-value">Backend &amp; Data Systems</span>
                             </div>
                             <div class="hero-meta-item">
-                                <span class="hero-meta-label">GitHub</span>
-                                <span class="hero-meta-value"><a href="https://github.com/sjr492" target="_blank" rel="noopener noreferrer">sjr492</a></span>
+                                <span class="hero-meta-label">Stack</span>
+                                <span class="hero-meta-value">Python · Java · SQL (learning)</span>
                             </div>
                         </div>
                         <div class="hero-buttons">
+                            <a href="#projects" class="social-btn secondary-btn">View projects</a>
                             <a href="https://github.com/sjr492" target="_blank" rel="noopener noreferrer" class="social-btn">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -1091,7 +1074,7 @@
                     </div>
                     <div class="hero-photo-wrap">
                         <div class="hero-photo">
-                            <img src="your-photo.jpg" alt="Sebastian Rivas" decoding="async">
+                            <img src="sebastian-rivas.jpg" alt="Sebastian Rivas" width="800" height="800" decoding="async">
                         </div>
                         <div class="hero-photo-caption">Miami, FL</div>
                     </div>
@@ -1099,52 +1082,58 @@
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" aria-labelledby="about-heading">
             <div class="container">
-                <div class="section-label reveal">About</div>
-                <p class="about-pull-quote reveal">I'm interested in how data moves from its source to the people and systems that depend on it.</p>
-                <p class="about-text reveal">I'm building a foundation in Python, Java, and SQL as I work toward a career in data engineering. My projects have given me practice with object-oriented programming, structured records, algorithms, and input validation. At SongTools, I tracked system dependencies and organized migration updates into a structured tracker and an executive report.</p>
+                <h2 id="about-heading" class="section-label reveal">About</h2>
+                <p class="about-pull-quote reveal">I like turning messy requirements and data into systems people can rely on.</p>
+                <p class="about-text reveal">I’m interested in software engineering, backend systems, and data workflows. My Python and Java coursework has given me practice with object-oriented design, file output, input validation, and game-state algorithms. During my SongTools internship, I documented domain dependencies and turned twice-weekly progress updates into a structured tracker and executive report.</p>
                 <div class="about-aside reveal">
                     <div class="about-aside-item">
-                        <strong>Programming Languages</strong>
+                        <h3>Programming languages</h3>
                         <div class="skills-grid">
                             <span class="skill-chip">Python</span>
                             <span class="skill-chip">Java</span>
-                            <span class="skill-chip">SQL</span>
+                            <span class="skill-chip">SQL (learning)</span>
                         </div>
                     </div>
                     <div class="about-aside-item">
-                        <strong>Creative Tools</strong>
+                        <h3>Tools &amp; web</h3>
                         <div class="skills-grid">
-                            <span class="skill-chip">Graphic Design — Canva</span>
-                            <span class="skill-chip">Video Editing — CapCut</span>
+                            <span class="skill-chip">Git</span>
+                            <span class="skill-chip">GitHub</span>
+                            <span class="skill-chip">Excel</span>
+                            <span class="skill-chip">HTML/CSS</span>
+                            <span class="skill-chip">JavaScript</span>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience">
+        <section id="experience" aria-labelledby="experience-heading">
             <div class="container">
-                <div class="section-label reveal">Experience</div>
+                <h2 id="experience-heading" class="section-label reveal">Experience</h2>
                 <div class="exp-list">
                     <div class="exp-item reveal">
                         <div class="exp-date">Jun 2026 — Aug 2026</div>
                         <div class="exp-content">
                             <h3>SongTools</h3>
                             <div class="exp-role">IT Project Coordination Intern · Miami, FL</div>
-                            <p>Tracked the technology team's migration from songtools.io to songtools.com, documenting dependencies across employee email accounts, application code, file directories, and other domain-linked systems.</p>
-                            <p>Conducted twice-weekly status check-ins with contributors via WhatsApp and phone. Used Excel and Claude to consolidate progress updates, blockers, and next steps into a structured tracker.</p>
-                            <p>Prepared and presented a one-page executive report to the CEO evaluating completion against the summer deadline and outlining remaining risks after a key developer's unexpected absence delayed the migration.</p>
+                            <ul class="exp-bullets">
+                                <li>Documented dependencies across employee email accounts, application code, file directories, and other systems for the songtools.io-to-songtools.com migration.</li>
+                                <li>Conducted twice-weekly status checks with contributors and maintained an Excel tracker of progress, blockers, and next steps.</li>
+                                <li>Prepared and presented a one-page executive report summarizing completion status, unresolved dependencies, and schedule risks.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="academics">
+        <section id="academics" aria-labelledby="academics-heading">
             <div class="container">
-                <div class="section-label reveal">Academics</div>
+                <h2 id="academics-heading" class="section-label reveal">Education</h2>
                 <div class="academics-list">
                     <div class="academic-item reveal">
                         <div class="academic-type">Education</div>
@@ -1172,63 +1161,52 @@
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" aria-labelledby="projects-heading">
             <div class="container">
-                <div class="section-label reveal">Projects</div>
+                <h2 id="projects-heading" class="section-label reveal">Projects</h2>
                 <div class="projects-grid">
                     <article class="project-card reveal">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                            <path d="m8 10 3 2-3 2M13 14h3"></path>
-                        </svg>
                         <div class="project-header">
-                            <h3>Connect Four Game</h3>
+                            <h3>Connect Four CLI with Rule-Based AI</h3>
                         </div>
                         <div class="project-tech">
                             <span>Java</span>
                             <span>OOP</span>
                             <span>Algorithms</span>
                         </div>
-                        <p>Developed an object-oriented command-line game using a 6-by-7 array to manage moves, turns, and board state. Implemented horizontal, vertical, diagonal, and anti-diagonal win detection. Supported four play and difficulty modes, including a rule-based computer opponent that cloned board states to find winning moves and block immediate losses.</p>
+                        <p class="project-kind">Coursework · Java</p>
+                        <p>Built a command-line game with a 6-by-7 board and win detection in every direction. Added a rule-based opponent that simulates moves to find wins and block immediate losses.</p>
+                        <div class="project-actions"><span class="source-note">Source not publicly available</span></div>
                     </article>
                     <article class="project-card reveal">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                            <path d="m8 10 3 2-3 2M13 14h3"></path>
-                        </svg>
                         <div class="project-header">
-                            <h3>Student Record &amp; Games Application</h3>
+                            <h3>Roman Numerals &amp; Population Calculator</h3>
                         </div>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>OOP</span>
-                        </div>
-                        <p>Built an object-oriented, menu-driven console program with Student and Course classes to manage records, compute GPAs on a 4.0 scale, and generate transcript files. Implemented additional modules using loops, conditionals, and randomization, and validated functionality and edge cases against provided test output.</p>
+                        <div class="project-tech"><span>Python</span><span>Input validation</span></div>
+                        <p class="project-kind">Coursework · CSC 115</p>
+                        <p>Built a menu-driven console application for Roman numeral and binary conversion and daily population-growth projections. Validated numeric ranges and formatted results as tables.</p>
+                        <div class="project-actions"><a class="project-link" href="https://github.com/sjr492/Roman-Numerals-Population-Calculator" target="_blank" rel="noopener noreferrer" aria-label="Source for Roman Numerals and Population Calculator">Source ↗</a></div>
                     </article>
                     <article class="project-card reveal">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-                            <path d="m8 10 3 2-3 2M13 14h3"></path>
-                        </svg>
                         <div class="project-header">
                             <h3>Personal Portfolio Website</h3>
-                            <a class="project-link" href="https://github.com/sjr492/sjr492.github.io" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
                         </div>
                         <div class="project-tech">
-                            <span>GitHub Codespaces</span>
+                            <span>GitHub Pages</span>
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
-                        <p>Developed a responsive website to showcase projects, skills, and professional experience. Used GitHub Codespaces and AI-assisted tools to streamline development, and hosted the site on GitHub Pages.</p>
+                        <p>Built this portfolio with semantic HTML, responsive CSS, and vanilla JavaScript. Added keyboard navigation, reduced-motion support, and accessible clipboard feedback, with deployment through GitHub Pages.</p>
+                        <div class="project-actions"><a class="project-link" href="https://github.com/sjr492/sjr492.github.io" target="_blank" rel="noopener noreferrer" aria-label="Source for Personal Portfolio Website">Source ↗</a><a class="project-link" href="https://sebastianjrivas.page/">Live site ↗</a></div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="involvement">
+        <section id="involvement" aria-labelledby="involvement-heading">
             <div class="container">
-                <div class="section-label reveal">Involvement</div>
+                <h2 id="involvement-heading" class="section-label reveal">Involvement</h2>
                 <div class="involvement-list reveal">
                     <article class="involvement-item">
                         <h3>Kappa Theta Pi</h3>
@@ -1259,10 +1237,10 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" aria-labelledby="contact-heading">
             <div class="container">
-                <div class="section-label reveal">Contact</div>
-                <p class="contact-text reveal">I'm looking for opportunities to grow in data engineering and apply my Python and SQL skills to real-world data problems. I'm especially interested in learning to build reliable data pipelines, improve data quality, and organize information so teams can use it with confidence.</p>
+                <h2 id="contact-heading" class="section-label reveal">Contact</h2>
+                <p class="contact-text reveal">I’m seeking software engineering, backend, or data-focused internships where I can contribute with Python, Java, and careful problem-solving while continuing to develop my SQL skills.</p>
                 <div class="contact-actions reveal">
                     <a href="mailto:sjr492@miami.edu" class="cta-btn">
                         Let's connect
@@ -1281,9 +1259,10 @@
                                 <path d="m5 12 4 4L19 6"></path>
                             </svg>
                         </span>
-                        <span class="copied-toast" aria-live="polite">Copied!</span>
+                        <span class="copied-toast" aria-hidden="true">Copied!</span>
                     </button>
                 </div>
+                <span id="copy-status" class="sr-only" role="status" aria-live="polite"></span>
                 <div class="contact-buttons reveal">
                     <a href="https://github.com/sjr492" target="_blank" rel="noopener noreferrer" class="social-btn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1304,7 +1283,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="footerYear">2025</span> Sebastian Rivas &middot; <span style="color: var(--text-muted)">Built with curiosity</span></p>
+            <p>&copy; <span id="footerYear">2026</span> Sebastian Rivas &middot; <span style="color: var(--text-muted)">Built with curiosity</span></p>
         </div>
     </footer>
 
@@ -1348,6 +1327,12 @@
                 }
 
                 mobileMenu.classList.add('active');
+                mobileMenu.setAttribute('aria-hidden', 'false');
+                menuBtn.setAttribute('aria-label', 'Close menu');
+                document.querySelector('main').inert = true;
+                nav.inert = true;
+                document.querySelector('footer').inert = true;
+                menuClose.focus();
                 menuBtn.setAttribute('aria-expanded', 'true');
                 document.body.style.overflow = 'hidden';
             };
@@ -1357,7 +1342,14 @@
                     return;
                 }
 
+                if (!mobileMenu.classList.contains('active')) return;
                 mobileMenu.classList.remove('active');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+                menuBtn.setAttribute('aria-label', 'Open menu');
+                document.querySelector('main').inert = false;
+                nav.inert = false;
+                document.querySelector('footer').inert = false;
+                menuBtn.focus();
                 menuBtn.setAttribute('aria-expanded', 'false');
                 document.body.style.overflow = '';
             };
@@ -1371,14 +1363,27 @@
             }
 
             document.querySelectorAll('.mobile-link').forEach((link) => {
-                link.addEventListener('click', closeMenu);
+                link.addEventListener('click', () => {
+                    closeMenu();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    target.setAttribute('tabindex', '-1');
+                    target.focus({ preventScroll: true });
+                });
             });
 
             document.addEventListener('keydown', (event) => {
+                if (event.key === 'Tab' && mobileMenu.classList.contains('active')) {
+                    const items = mobileMenu.querySelectorAll('button, a');
+                    const first = items[0], last = items[items.length - 1];
+                    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+                    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+                }
                 if (event.key === 'Escape') {
                     closeMenu();
                 }
             });
+
+            window.matchMedia('(min-width: 768px)').addEventListener('change', (event) => { if (event.matches) closeMenu(); });
 
             const reveals = document.querySelectorAll('.reveal');
             if ('IntersectionObserver' in window) {
@@ -1415,8 +1420,9 @@
                 input.value = text;
                 document.body.appendChild(input);
                 input.select();
-                document.execCommand('copy');
-                input.remove();
+                let copied;
+                try { copied = document.execCommand('copy'); } finally { input.remove(); }
+                if (!copied) throw new Error('Copy failed');
             };
 
             document.querySelectorAll('.email-copy').forEach((element) => {
@@ -1429,14 +1435,19 @@
                     }
 
                     try {
+                        document.getElementById('copy-status').textContent = '';
                         await copyToClipboard(email);
+                        this.focus();
+                        document.getElementById('copy-status').textContent = 'Email address copied.';
                         this.classList.add('show-toast');
                         setTimeout(() => this.classList.remove('show-toast'), 2000);
                     } catch (_error) {
-                        window.location.href = `mailto:${email}`;
+                        this.focus();
+                        document.getElementById('copy-status').textContent = 'Could not copy. Select the email address or use the contact link.';
                     }
                 });
             });
+            document.body.classList.add('interactive');
         })();
     </script>
 </body>
