@@ -32,7 +32,7 @@ Open [http://localhost:8000](http://localhost:8000) in a browser.
 ```text
 .
 ├── index.html       # Site content, styles, and behavior
-├── your-photo.jpg   # Hero image
+├── sebastian-rivas.jpg   # Hero image
 ├── SR.ico           # Site favicon
 └── CNAME            # Custom domain configuration
 ```
@@ -40,8 +40,22 @@ Open [http://localhost:8000](http://localhost:8000) in a browser.
 ## Updating the site
 
 - Edit content, styles, and client-side behavior in `index.html`.
-- Replace `your-photo.jpg` to update the hero image while keeping the same filename.
+- Replace `sebastian-rivas.jpg` to update the hero image while keeping the same filename.
 - Push changes to the branch configured in GitHub Pages to publish the update.
+
+## Featured source code
+
+- [Roman Numerals & Population Calculator](https://github.com/sjr492/Roman-Numerals-Population-Calculator): Python coursework with setup instructions and examples.
+- [Portfolio website](https://github.com/sjr492/sjr492.github.io): this repository.
+- Connect Four is labeled as coursework; its source is not currently public.
+
+## Accessibility and verification
+
+The site uses semantic section headings, a skip link, visible keyboard focus, a mobile menu with focus containment and restoration, reduced-motion support, and a separate clipboard status announcement. Content and mobile navigation remain available without JavaScript.
+
+For updates, check desktop and narrow mobile widths, keyboard navigation through the menu, Escape and anchor selection, clipboard success and failure, reduced motion, and JavaScript-disabled rendering. Check that anchor destinations and asset paths resolve before publishing.
+
+Keep project descriptions grounded in completed work. Add a résumé link only when a current PDF is available. Add membership dates or contributions only after verifying them.
 
 ## License
 
