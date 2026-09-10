@@ -1,14 +1,18 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Connect Four CLI | Sebastian Rivas</title><link rel="icon" href="../SR.ico"><link rel="stylesheet" href="demo.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Connect Four CLI | Sebastian Rivas</title><link rel="icon" href="../SR.ico"><link rel="stylesheet" href="demo.css?v=20260910-console2"></head>
 <body><main>
 <nav><a href="../index.html#projects">← Back to projects</a><a href="https://github.com/sjr492/Connect-Four-Game" target="_blank" rel="noopener noreferrer">View Code ↗</a></nav>
 <h1>Connect Four CLI</h1><p id="instructions">Type your answer at the prompt and press Enter.</p>
 <section class="terminal" aria-label="Interactive console">
-<header><span>Console</span><button id="restart" type="button">Restart</button></header>
+<header><span>Console</span><button id="restart" type="button" disabled>Restart</button></header>
 <div id="transcript" role="log" aria-label="Console output" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
-<form id="console-input" autocomplete="off"><label id="prompt" for="command"></label><div class="input-row"><span aria-hidden="true">&gt;</span><input id="command" name="command" type="text" spellcheck="false" autocapitalize="off" aria-describedby="instructions"><button type="submit">Enter</button></div></form>
-<p id="state" role="status"></p>
+<form id="console-input" autocomplete="off" hidden><label id="prompt" for="command"></label><div class="input-row"><span aria-hidden="true">&gt;</span><input id="command" name="command" type="text" spellcheck="false" autocapitalize="off" aria-describedby="instructions"><button type="submit">Enter</button></div></form>
+<p id="state" role="status">Loading console…</p>
 </section><small>JavaScript console adaptation of the original Java program. View Code opens the original source.</small>
 <noscript><p>Please enable JavaScript to run the console.</p></noscript>
-</main><script type="module" src="connect-four.mjs"></script></body></html>
+</main><script type="module">
+import('./connect-four.mjs?v=20260910-console2').catch(() => {
+ document.getElementById('state').textContent = 'The console could not load. Please reload the page to try again.';
+});
+</script></body></html>

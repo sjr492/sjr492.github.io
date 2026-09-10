@@ -1,4 +1,4 @@
-import {newBoard,drop,winner,openColumns,chooseMove,convert,population} from './logic.mjs';
+import {newBoard,drop,winner,openColumns,chooseMove,convert,population} from './logic.mjs?v=20260910-console2';
 // Generators pause at each original console input prompt.
 export function* connectFour(write,random=Math.random){
  do {

@@ -11,5 +11,5 @@ export function mountConsole(program){
  }
  function restart(focus){log.replaceChildren();input.value='';session=program(write);advance();if(focus)input.focus();}
  form.addEventListener('submit',event=>{event.preventDefault();const value=input.value;write(prompt.textContent+value);input.value='';advance(value);if(!form.hidden)input.focus();else document.getElementById('restart').focus();});
- document.getElementById('restart').addEventListener('click',()=>restart(true));restart(false);
+ document.getElementById('restart').addEventListener('click',()=>restart(true));restart(false);document.getElementById('restart').disabled=false;
 }
