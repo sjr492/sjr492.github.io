@@ -45,9 +45,9 @@ Open [http://localhost:8000](http://localhost:8000) in a browser.
 
 ## Featured source code
 
+- [Connect Four Game](https://github.com/sjr492/Connect-Four-Game): Java coursework with local multiplayer and a rule-based computer opponent.
 - [Roman Numerals & Population Calculator](https://github.com/sjr492/Roman-Numerals-Population-Calculator): Python coursework with setup instructions and examples.
 - [Portfolio website](https://github.com/sjr492/sjr492.github.io): this repository.
-- Connect Four is labeled as coursework; its source is not currently public.
 
 ## Accessibility and verification
 
