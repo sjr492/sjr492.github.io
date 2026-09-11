@@ -46,8 +46,19 @@ Open [http://localhost:8000](http://localhost:8000) in a browser.
 ## Featured source code
 
 - [Connect Four Game](https://github.com/sjr492/Connect-Four-Game): Java coursework with local multiplayer and a rule-based computer opponent.
+- [Student Record & Games Application](https://github.com/sjr492/Student-Record-and-Games-Application): Python final project with credit-weighted GPAs, transcript export, and additional console activities.
 - [Roman Numerals & Population Calculator](https://github.com/sjr492/Roman-Numerals-Population-Calculator): Python coursework with setup instructions and examples.
 - [Portfolio website](https://github.com/sjr492/sjr492.github.io): this repository.
+
+## Console demos
+
+The project cards link to console demos in `demos/`. These are JavaScript adaptations of the original coursework and run in the browser without a backend. Each prompt accepts typed input with Enter; Restart begins a new session.
+
+- `demos/connect-four.html`: Connect Four with the original console board and opponent levels.
+- `demos/calculator.html`: Roman numeral/binary conversion and population projections.
+- `demos/student-record.html`: the final project's four menu activities. Student transcripts appear in the console and can be downloaded as text files. Entries are held only for the current page session.
+
+The final-project demo preserves the original grade list and course-validation behavior, including skipped invalid course entries. Browser-specific differences are transcript downloads, safe download filenames, and a safe-integer limit on numeric inputs. GPA display uses JavaScript's fixed-decimal rounding, which can differ from Python on exact halfway values.
 
 ## Accessibility and verification
 

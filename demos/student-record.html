@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Try Sebastian Rivas's Student Record and Games Application in an interactive console: calculate GPAs, download transcripts, and play the additional activities.">
+<title>Student Record &amp; Games Application | Sebastian Rivas</title>
+<link rel="icon" href="../SR.ico">
+<link rel="stylesheet" href="demo.css?v=20260910-console2">
+</head>
+<body><main>
+<nav><a href="../index.html#projects">← Back to projects</a><a href="https://github.com/sjr492/Student-Record-and-Games-Application" target="_blank" rel="noopener noreferrer">View Code ↗</a></nav>
+<h1>Student Record &amp; Games Application</h1>
+<p id="instructions">Type your answer at the prompt and press Enter. Option 1 creates a transcript you can download.</p>
+<section class="terminal" aria-label="Interactive console">
+<header><span>Console</span><button id="restart" type="button" disabled>Restart</button></header>
+<div id="transcript" role="log" aria-label="Console output" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
+<form id="console-input" autocomplete="off" hidden><label id="prompt" for="command"></label><div class="input-row"><span aria-hidden="true">&gt;</span><input id="command" name="command" type="text" spellcheck="false" autocapitalize="off" aria-describedby="instructions"><button type="submit">Enter</button></div></form>
+<p id="state" role="status">Loading console…</p>
+</section>
+<p id="transcript-download" hidden><a id="download-transcript">Download transcript</a></p>
+<small>JavaScript console adaptation of the original Python program. View Code opens the original source. Entries stay in this page; restarting clears the session.</small>
+<noscript><p>Please enable JavaScript to run the console.</p></noscript>
+</main><script type="module">
+import('./student-record.mjs?v=20260911-student1').catch(() => {
+ document.getElementById('state').textContent = 'The console could not load. Please reload the page to try again.';
+});
+</script></body></html>
